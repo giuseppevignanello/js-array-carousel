@@ -1,0 +1,21 @@
+img {
+    max-width: 100%;
+}
+
+.centred {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , 50%);
+}
+
+.next {
+    bottom: 5%;
+    left: 40%;
+}
+
+
+.prev {
+    left: 40%;
+}
+
