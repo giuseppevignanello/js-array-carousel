@@ -44,6 +44,7 @@ nextEl.addEventListener("click",
 
 function(){
 // remove the class active from the current img
+console.log("click");
 
 let currentImg = displayedImgEl[activeImg]; 
 
@@ -52,7 +53,7 @@ currentImg.classList.remove("active");
 
 activeImg++; 
 // assign class active to next/prev img 
-
+console.log(activeImg);
 
 let nextImg = displayedImgEl[activeImg]; 
 nextImg.classList.add("active")
@@ -67,6 +68,8 @@ prevEl.addEventListener("click",
 function(){
 // remove the class active from the current img
 
+console.log("click");
+
 let currentImg = displayedImgEl[activeImg]; 
 
 currentImg.classList.remove("active");
@@ -74,11 +77,17 @@ currentImg.classList.remove("active");
 
 activeImg--; 
 // assign class active to next/prev img 
-
+console.log(activeImg);
 
 let prevImg = displayedImgEl[activeImg]; 
 prevImg.classList.add("active")
+
+
+
 })
+
+
+// Aggiungere il ciclo infinito del carosello. Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare all’immagine precedente, dovrà comparire l’ultima immagine dell’array e viceversa.
 
 
 
