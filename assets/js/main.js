@@ -55,8 +55,14 @@ activeImg++;
 // assign class active to next/prev img 
 console.log(activeImg);
 
-let nextImg = displayedImgEl[activeImg]; 
+if (activeImg = 4) {
+   let nextImg = 0
+} else { 
+  let nextImg = displayedImgEl[activeImg]; 
 nextImg.classList.add("active")
+
+
+
 })
 
 
@@ -88,6 +94,9 @@ prevImg.classList.add("active")
 
 
 // Aggiungere il ciclo infinito del carosello. Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare all’immagine precedente, dovrà comparire l’ultima immagine dell’array e viceversa.
+
+// add if/else condition to next/prev addEventListener 
+// if activeImg is <0 or >5 than will be =5 or 0
 
 
 
