@@ -19,3 +19,8 @@ img {
     left: 40%;
 }
 
+
+img:not(.active) {
+    display: none;
+}
+
