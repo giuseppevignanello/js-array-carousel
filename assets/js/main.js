@@ -21,6 +21,7 @@ const images = [
 ]
 
 const imagesElement = document.querySelector(".images"); 
+const displayedImgSection = document.querySelector(".current_image")
 
 let activeImg = 0
 //with CSS hide all images except one 
@@ -28,15 +29,23 @@ let activeImg = 0
 // add images to HTML with templete literal and insertAdjacentHTML
 for (i=0; i<images.length; i++) {
     const imgSrc = images[i]; 
-    const imageEl = `<img class = "${i === activeImg ? 'active' : ''}" src="${imgSrc}" alt="">`
+    const imageEl = `<img class = "${i === activeImg ? 'active' : ''} " src="${imgSrc}" alt="">`
     console.log(imageEl);
     imagesElement.insertAdjacentHTML("beforeend", imageEl)
 }
 
+ for (i=0; i<images.length; i++) {
+     const currentImgSrc = images[i]; 
+     const currentImageEl = `<img class = "${i === activeImg ? 'show' : ''} " src="${currentImgSrc}" alt="">`
+     console.log(currentImageEl);
+     displayedImgSection.insertAdjacentHTML("beforeend", currentImageEl)
+ }
+
 
 // create a const for displayed img 
 
-const displayedImgEl = document.querySelectorAll("img"); 
+ const displayedImgEl = document.querySelectorAll(".current_image img");
+ const thumblineImgEl =  document.querySelectorAll(".images img");
 // add event listener to next/prev 
 const nextEl = document.querySelector(".next"); 
 
@@ -47,8 +56,10 @@ function(){
 console.log("click");
 
 let currentImg = displayedImgEl[activeImg]; 
+let selectedImgEl = thumblineImgEl[activeImg];
 
-currentImg.classList.remove("active");
+selectedImgEl.classList.remove("active");
+currentImg.classList.remove("show");
 // increase/decrease activeImg counter
 
 if (activeImg === 4) {
@@ -61,7 +72,9 @@ if (activeImg === 4) {
 console.log(activeImg);
 
 let nextImg = displayedImgEl[activeImg]; 
-nextImg.classList.add("active")
+let nextSelectedImg = thumblineImgEl[activeImg];
+nextSelectedImg.classList.add("active");
+nextImg.classList.add("show")
 
 }
  )
@@ -78,8 +91,10 @@ function(){
 console.log("click");
 
 let currentImg = displayedImgEl[activeImg]; 
+let selectedImgEl = thumblineImgEl[activeImg];
 
-currentImg.classList.remove("active");
+selectedImgEl.classList.remove("active");
+currentImg.classList.remove("show");
 // increase/decrease activeImg counter
 
 if (activeImg === 0) {
@@ -92,7 +107,9 @@ if (activeImg === 0) {
 console.log(activeImg);
 
 let prevImg = displayedImgEl[activeImg]; 
-prevImg.classList.add("active")
+let prevSelectedImg = thumblineImgEl[activeImg];
+prevSelectedImg.classList.add("active");
+prevImg.classList.add("show");
 
 
 

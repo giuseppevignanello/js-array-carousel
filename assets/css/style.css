@@ -12,11 +12,13 @@ img {
 .next {
     bottom: 5%;
     left: 40%;
+    z-index: 10000;
 }
 
 
 .prev {
     left: 40%;
+    z-index: 10000;
 }
 
 .active {
@@ -24,11 +26,11 @@ img {
 
 }
 
-img:not(.active) {
+.images img:not(.active) {
     filter: opacity(0.5);
 }
 
- /* img:not(.active) {
+ .current_image img:not(.show) {
     display: none;
  }
- */
+
