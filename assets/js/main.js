@@ -19,8 +19,18 @@ const images = [
     "./assets/img/04.webp",
     "./assets/img/05.webp",
 ]
+
+const imagesElement = document.querySelector(".images"); 
+
+
 //with CSS hide all images except one 
 // create a for to slide the images 
+
+for (i=0; i<images.length; i++) {
+    const imgSrc = images[i]; 
+    const imageEl = `<img src"${imgSrc}" alt "">`
+    console.log(imageEl);
+}
 // add images to HTML with templete literal and insertAdjacentHTML
 
 
