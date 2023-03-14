@@ -28,8 +28,10 @@ const imagesElement = document.querySelector(".images");
 
 for (i=0; i<images.length; i++) {
     const imgSrc = images[i]; 
-    const imageEl = `<img src"${imgSrc}" alt "">`
+    const imageEl = `<img src="${imgSrc}" alt="">`
     console.log(imageEl);
+
+    imagesElement.insertAdjacentHTML("beforeend", imageEl)
 }
 // add images to HTML with templete literal and insertAdjacentHTML
 
