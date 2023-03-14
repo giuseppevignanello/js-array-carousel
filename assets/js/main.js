@@ -51,19 +51,20 @@ let currentImg = displayedImgEl[activeImg];
 currentImg.classList.remove("active");
 // increase/decrease activeImg counter
 
-activeImg++; 
+if (activeImg === 4) {
+    activeImg = 0
+    } else {
+    activeImg ++
+    }
+; 
 // assign class active to next/prev img 
 console.log(activeImg);
 
-if (activeImg = 4) {
-   let nextImg = 0
-} else { 
-  let nextImg = displayedImgEl[activeImg]; 
+let nextImg = displayedImgEl[activeImg]; 
 nextImg.classList.add("active")
 
-
-
-})
+}
+ )
 
 
 // add event listener to next/prev 
@@ -81,7 +82,12 @@ let currentImg = displayedImgEl[activeImg];
 currentImg.classList.remove("active");
 // increase/decrease activeImg counter
 
-activeImg--; 
+if (activeImg === 0) {
+    activeImg = 4
+    } else {
+    activeImg --
+    }
+
 // assign class active to next/prev img 
 console.log(activeImg);
 
