@@ -20,7 +20,7 @@ img {
 }
 
 
-/* img:not(.active) {
+
+ img:not(.active) {
     display: none;
-}
- */
+ }

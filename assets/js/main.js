@@ -22,15 +22,14 @@ const images = [
 
 const imagesElement = document.querySelector(".images"); 
 
-
+let activeImage = 0
 //with CSS hide all images except one 
 // create a for to slide the images 
 
 for (i=0; i<images.length; i++) {
     const imgSrc = images[i]; 
-    const imageEl = `<img src="${imgSrc}" alt="">`
+    const imageEl = `<img class = "${i === activeImage ? 'active' : ''}" src="${imgSrc}" alt="">`
     console.log(imageEl);
-
     imagesElement.insertAdjacentHTML("beforeend", imageEl)
 }
 // add images to HTML with templete literal and insertAdjacentHTML
